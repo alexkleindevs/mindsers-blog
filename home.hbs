@@ -42,81 +42,8 @@
         </div>
     </section>
 
-    <section class="mds-testimonials">
-        <div class="mds-container">
-            {{> "testimonials"
-                text="I discovered Mindsers on Instagram, and I learned so much since I read his blog (thanks for the C & PHP articles!). The community is the perfect environment to learn new things, come join us !"
-                people="Arthur M."
-            }}
-            {{> "testimonials"
-                text="Mindsers' blog is the perfect place to start when learning how to code! Full of good resources and advice."
-                people="Maëva C."
-            }}
-            {{> "testimonials"
-                text="Thanks for the blog, there are a lot of great content. I completely agree with what I read here especially in the ＂ Best Practices ＂ section. Keep the good work!"
-                people="Yexan"
-            }}
-            {{> "testimonials"
-                text="Super blog de Nath ! Les articles sont bien rédigés et illustrés. Rapides à lire, ils m’ont beaucoup aidé à démystifier certains sujets qui sont abstraits pour les débutants. Les exemples choisis sont pratiques et expliqués simplement. Je recommande à 100 %."
-                people="Valérie A."
-            }}
-        </div>
-    </section>
 
-    <section class="post-grid">
-        <div class="mds-container">
-            <h2 class="section-title">
-                My last blog posts
-                <a class="icon" href="{{@site.url}}/posts/rss/" title="Follow our English posts using a RSS reader">{{> "icons/rss"}}</a>
-            </h2>
-            <div class="mds-postfeed">
-            {{#get "posts" filter="tag:hash-en+tag:-[hash-email,hash-newsletter-issue]" limit="5"}}
-                {{#foreach posts}}
-                    {{> "thumbnail-card"}}
-                {{/foreach}}
-            {{/get}}
-                <div class="more">
-                    <p>Want to read more?</p>
-                    <p><a href="/posts/" class="button primary">Browse all</a></p>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <section class="highlighted-band">
-        <div class="mds-container">
-            {{#if @member.paid}}
-                <h2 class="section-title">
-                    You have complete access to my monthly paid newsletter about my coding journey and my business journey
-                </h2>
-                <a href="/issues/" class="button">Browse the newsletter issues!</a>
-            {{else}}
-                <h2 class="section-title">
-                    I also have a monthly paid newsletter about my coding journey and my business journey
-                </h2>
-                <a href="/newsletter/" class="button">Learn about the newsletter</a>
-            {{/if}}
-        </div>
-    </section>
 
-    <section class="post-grid">
-        <div class="mds-container">
-            <h2 class="section-title">
-                My last French blog posts
-                <a class="icon" href="{{@site.url}}/fr/posts/rss/" title="Follow our French posts using a RSS reader">{{> "icons/rss"}}</a>
-            </h2>
-            <div class="mds-postfeed" lang="fr">
-            {{#get "posts" filter="tag:hash-fr+tag:-[hash-email,hash-newsletter-issue]" limit="5"}}
-                {{#foreach posts}}
-                    {{> "thumbnail-card"}}
-                {{/foreach}}
-            {{/get}}
-                <div class="more" lang="en">
-                    <p>Want to read more?</p>
-                    <p><a href="/fr/posts/" class="button primary">Browse all</a></p>
-                </div>
-            </div>
-        </div>
-    </section>
     </div>
 </div>
